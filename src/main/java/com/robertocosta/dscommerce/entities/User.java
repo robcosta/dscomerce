@@ -1,11 +1,14 @@
 package com.robertocosta.dscommerce.entities;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
 @Entity
@@ -21,11 +24,13 @@ public class User {
 	private LocalDate birthDate;
 	private String password;
 	
+	@OneToMany(mappedBy = "client")
+	private List<Order> orders = new ArrayList<>();
+	
 	public User() {
 	}
 
 	public User(Long id, String name, String email, String phone, LocalDate birthDate, String password) {
-		super();
 		this.id = id;
 		this.name = name;
 		this.email = email;
@@ -80,5 +85,9 @@ public class User {
 
 	public void setPassword(String password) {
 		this.password = password;
+	}
+	
+	public List<Order> getOrders() {
+		return orders;
 	}
 }

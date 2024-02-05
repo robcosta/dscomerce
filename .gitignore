@@ -31,3 +31,7 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### Postman ###
+DSCommerce Cap05.postman_collection.json
+DSCommerce env.postman_environment.json

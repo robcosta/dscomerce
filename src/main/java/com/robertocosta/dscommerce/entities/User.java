@@ -118,6 +118,15 @@ public class User implements UserDetails{
 	public void setRoles(Set<Role> roles) {
 		this.roles = roles;
 	}
+	
+    public boolean hasRole(String roleName) {
+    	for(Role role: this.roles){
+    		if(role.getAuthority().equals(roleName)) {
+    			return true;
+    		}
+    	}
+    	return false;
+    }
 
 	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {

@@ -110,6 +110,10 @@ public class User implements UserDetails{
 	public List<Order> getOrders() {
 		return orders;
 	}
+	
+	public Set<Role> getRoles() {
+		return roles;
+	}
 
 	public void addRole(Role role) {
 		roles.add(role);

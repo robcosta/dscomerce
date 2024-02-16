@@ -1,6 +1,6 @@
-# Projeto DSList - Intensivão Java Spring
+# Projeto DSCommerce - Curso Java Spring Professinnal
 
-**1. Perdeu alguma aula ou material de apoio?**
+**DEVSUPERIOR**
 
 Inscreva-se para receber no seu email:
 
